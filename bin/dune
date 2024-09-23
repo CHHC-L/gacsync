@@ -1,0 +1,17 @@
+(executable
+ (public_name gacsync)
+ (name main)
+ (modules fetch main)
+ (libraries
+  gacsync
+  bogue
+  lwt
+  cohttp
+  cohttp-lwt-unix
+  markup
+  yojson
+  lambdasoup)
+ (flags
+  (:standard -w -26 -w -27 -w -32 -w -33))
+ (preprocess
+  (pps lwt_ppx)))
